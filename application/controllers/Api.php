@@ -46,7 +46,8 @@ class Api extends REST_Controller
             $this->response('mode hoặc token rỗng',404);
         }
         if ( $mode === 'subscribe' && $token === $verify_token ) {
-            $this->response($challenge,200);
+            die(json_encode($challenge));
+            //$this->response($challenge,200);
         }
         // $input = json_decode(file_get_contents('php://input'), true);
         // // Get the Senders Graph ID
